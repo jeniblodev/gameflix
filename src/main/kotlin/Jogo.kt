@@ -1,10 +1,8 @@
-
 class Jogo {
-    var info: Info? = null
-    var cheapestPriceEver: MenorPreco? = null
-    override fun toString(): String {
-        return "Jogo($info), Preço($cheapestPriceEver)"
-    }
+    var titulo = ""
+    var descricao = ""
+    var preco = 0
+    var loja = ""
 
 
 }
