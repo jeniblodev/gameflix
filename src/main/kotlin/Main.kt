@@ -22,12 +22,18 @@ fun main() {
     val response = client
         .send(request, BodyHandlers.ofString())
     val json = response.body()
-    println(json)
+
 
     val gson = Gson()
-    val info = gson.fromJson(json, Jogo::class.java)
+    val jogo = gson.fromJson(json, Jogo::class.java)
 
-    println(info)
+    val gamer = Gamer(gamerTag = "tag", nomeReal = "José Silva", equipe = "Equipe 1", icone = "url.com")
+
+    gamer.recomendar(jogo)
+    gamer.favoritar(jogo)
+
+    
+
 
 }
 
