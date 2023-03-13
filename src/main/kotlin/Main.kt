@@ -27,13 +27,8 @@ fun main() {
     val gson = Gson()
     val jogo = gson.fromJson(json, Jogo::class.java)
 
-    val gamer = Gamer(gamerTag = "tag", nomeReal = "José Silva", equipe = "Equipe 1", icone = "url.com")
 
-    gamer.recomendar(jogo)
-    gamer.favoritar(jogo)
-
-    
-
+    println(jogo)
 
 }
 

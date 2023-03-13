@@ -1,1 +1,1 @@
-data class MenorPreco(val price: Double)
+data class MenorPreco(var price: Double)
