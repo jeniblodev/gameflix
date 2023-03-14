@@ -1,8 +1,11 @@
+import com.google.gson.Gson
+
 class Gamer(
     val gamerTag: String,
     val nomeReal: String,
     val equipe: String,
-    val icone: String
+    val icone: String,
+    val regiao: Regiao
 ) {
     var pontuacao: Double = 0.0
         get() = 0.0
@@ -16,4 +19,10 @@ class Gamer(
     fun favoritar(jogo: Jogo) {
         println("adicionando o jogo \"${jogo.info?.title}\" aos favoritos")
     }
+
+    override fun toString(): String {
+        return "Gamer(gamerTag='$gamerTag', nomeReal='$nomeReal', equipe='$equipe', icone='$icone', regiao='$regiao', pontuacao=$pontuacao)"
+    }
+
+
 }
